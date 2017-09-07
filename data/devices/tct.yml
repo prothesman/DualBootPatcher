@@ -5,6 +5,8 @@
     - 4032D
     - 4032E
     - 4032X
+    -yaris_m_gsm
+    -'4032'
   architecture: armeabi-v7a
 
   block_devs:
