@@ -1,0 +1,39 @@
+- name: Alcatel Pop C2
+  id: yaris_m_gsm
+  codenames:
+    - 4032A
+    - 4032D
+    - 4032E
+    - 4032X
+  architecture: armeabi-v7a
+
+  block_devs:
+    base_dirs:
+      - /dev/block/platform/mtk-msdc.0
+      - /dev/
+    system:
+      - /dev/block/platform/mtk-msdc.0/mmcblk0p7
+      - /dev/block/mmcblk0p7
+    cache:
+      - /dev/block/platform/mtk-msdc.0/mmcblk0p8
+      - /dev/block/mmcblk0p8
+    data:
+      - /dev/block/platform/mtk-msdc.0/mmcblk0p9
+      - /dev/block/mmcblk0p9
+    boot:
+      - /dev/block/platform/mtk-msdc.0/mmcblk0p7
+      - /dev/bootimg
+    recovery:
+      - /dev/block/platform/mtk-msdc.0/mmcblk0p7
+      - /dev/recovery
+
+
+  boot_ui:
+    supported: true
+    graphics_backends:
+      - fbdev
+    brightness_path: /sys/class/leds/lcd-backlight/brightness
+    max_brightness: 255
+    default_brightness: 160
+    pixel_format: RGBX_8888
+    theme: portrait_hdpi
